@@ -52,7 +52,15 @@ public class GameTest {
     }
 
     @Test
-    public void shouldNotRegistered() {
+    public void shouldNotRegisteredFirstPlayer() {
+
+        Assertions.assertThrows(NotRegisteredException.class, () -> {
+            game.round("Player 6", "Player 3");
+        });
+    }
+
+    @Test
+    public void shouldNotRegisteredSecondPlayer() {
 
         Assertions.assertThrows(NotRegisteredException.class, () -> {
             game.round("Player 2", "Player 6");

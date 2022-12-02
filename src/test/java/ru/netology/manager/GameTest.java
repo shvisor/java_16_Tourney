@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import ru.netology.domain.Player;
 import ru.netology.exception.NotRegisteredException;
 
-import java.security.PublicKey;
-
 public class GameTest {
     Game game = new Game();
 

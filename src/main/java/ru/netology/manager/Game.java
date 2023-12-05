@@ -32,11 +32,8 @@ public class Game {
     }
 
     public Integer findByName(String name) {
-        for (String key : players.keySet()) {
-            if (key.equals(name)) {
-                Integer value = players.get(key);
-                return value;
-            }
+        if (players.get(name) != null) {
+            return players.get(name);
         }
         return null;
     }
